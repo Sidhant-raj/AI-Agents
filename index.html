@@ -622,7 +622,8 @@
 </div>
 
 <script>
-const WS_URL = `ws://ai-agents-sid.vercel.app/ws/chat`;
+const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+const WS_URL = `${protocol}//ai-agents-sid.vercel.app/ws/chat`;
 
 let ws = null;
 let isProcessing = false;
